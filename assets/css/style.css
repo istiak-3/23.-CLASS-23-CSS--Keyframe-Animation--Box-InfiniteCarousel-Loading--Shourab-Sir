@@ -1,0 +1,152 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /*-- ============= common css end ================== --*/
+
+    section#Box-An {
+        height: 30vh;
+        position: relative;
+    }
+
+    section#Box-An .box {
+        height: 100px;
+        width: 100px;
+        background: red;
+        border-radius: 0;
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translateY(-50%);
+
+
+        animation-name: box-curve;
+        animation-duration: 2s;
+        animation-delay: 1s;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-timing-function: linear;
+    }
+
+    @keyframes box-curve {
+        0% {
+            width: 100px;
+            height: 100px;
+        }
+
+        50% {
+            width: 200px;
+            height: 100px;
+        }
+
+        100% {
+            width: 200px;
+            height: 200px;
+        }
+    }
+    /*-- ============= box animation END ==================== --*/
+
+
+    #Carousel-Infinite .container {
+        height: 40vh;
+        width: 1250px;
+        margin: auto;
+
+        display: flex;
+        align-items: center;
+        overflow-x: hidden;
+        background: #F4F4F4;
+    }
+
+    #Carousel-Infinite .container .wrapper {
+        border-top: 0.1px solid #a7a7a7;
+        border-bottom: 0.1px solid #a7a7a7;
+        box-shadow: 0 3px 6px 0.1px #2c2c2c3d;
+    }
+
+    #Carousel-Infinite .container .row {
+        display: flex;
+        padding: 10px 0;
+        animation: carousel-infinite 5s linear 0s infinite normal forwards;
+    }
+
+    @keyframes carousel-infinite {
+        0% {
+            transform: translateX(0%);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    #Carousel-Infinite img {
+        display: inline-block;
+        height: 150px;
+        width: calc((100% / 5) - 20px);
+        /* When a flex child has a percentage width, you must apply flex-shrink: 0 to prevent the default shrinking behavior. */
+        flex-shrink: 0;
+        margin: 0 10px;
+
+    }
+    /*-- ============= Infinite-carousel animation END ==================== --*/
+
+
+    #Loading {
+        height: 30vh;
+        position: relative;
+    }
+
+    #Loading .loader {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border-top: 10px solid #c0c0c0;
+        border-right: 10px solid transparent;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+
+        animation: loading 2s linear 0s infinite normal forwards;
+    }
+
+    @keyframes loading {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    #Loading .loader2 {
+        height: 150px;
+        width: 150px;
+        border-left: 10px solid transparent;
+        border-top: 10px solid #c0c0c0;
+        border-radius: 50%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+
+        animation: loading2 2s linear 0s infinite normal forwards;
+    }
+
+    @keyframes loading2 {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+
+        100% {
+            transform: translate(-50%, -50%) rotate(-360deg);
+        }
+    }
+    /*-- ============= Loading animation END ================== --*/
