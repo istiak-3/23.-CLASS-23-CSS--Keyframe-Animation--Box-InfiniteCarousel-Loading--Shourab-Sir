@@ -87,12 +87,13 @@
     #Carousel-Infinite img {
         display: inline-block;
         height: 150px;
-        width: calc((100% / 5) - 20px);
-        /* When a flex child has a percentage width, you must apply flex-shrink: 0 to prevent the default shrinking behavior. */
+        width: calc((100% / 5) - 20px); /* Infinite slide - Crucial */
+
+        /* When a flex child has a percentage width, you must apply flex-shrink: 0; to prevent the default shrinking behavior. */
         flex-shrink: 0;
         margin: 0 10px;
-        /* Instead of margin between images, gap can also be used on its flex parent ...*/
-        /* But justify-content not suitable ...*/
+        /* Adding space between images- margin best for dynamic view, but gap can also be used on its flex parent ...*/
+        /* Note: justify-content not suitable cause it's purpose to distribute extra space not fixed space...*/
     }
     /*-- ============= Infinite-carousel animation END ==================== --*/
 
@@ -153,3 +154,4 @@
     }
 
     /*-- ============= Loading animation END ================== --*/
+
