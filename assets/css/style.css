@@ -62,14 +62,14 @@
     }
 
     #Carousel-Infinite .container .wrapper {
+        padding: 10px 0;
         border-top: 0.1px solid #a7a7a7;
         border-bottom: 0.1px solid #a7a7a7;
         box-shadow: 0 3px 6px 0.1px #2c2c2c3d;
     }
-
+    
     #Carousel-Infinite .container .row {
         display: flex;
-        padding: 10px 0;
         animation: carousel-infinite 5s linear 0s infinite normal forwards;
     }
 
@@ -81,6 +81,7 @@
         100% {
             transform: translateX(-100%);
         }
+        /* infinite trick - from translateX(0) to translateX(-100%) */
     }
 
     #Carousel-Infinite img {
@@ -90,7 +91,8 @@
         /* When a flex child has a percentage width, you must apply flex-shrink: 0 to prevent the default shrinking behavior. */
         flex-shrink: 0;
         margin: 0 10px;
-
+        /* Instead of margin between images, gap can also be used on its flex parent ...*/
+        /* But justify-content not suitable ...*/
     }
     /*-- ============= Infinite-carousel animation END ==================== --*/
 
@@ -149,4 +151,5 @@
             transform: translate(-50%, -50%) rotate(-360deg);
         }
     }
+
     /*-- ============= Loading animation END ================== --*/
