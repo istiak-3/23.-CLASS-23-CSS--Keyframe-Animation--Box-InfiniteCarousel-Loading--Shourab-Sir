@@ -19,14 +19,14 @@
 
     <section id="Carousel-Infinite">
         <div class="container">
-            <div class="wrapper">
-                <div class="row">
+            <div class="wrapper"> <!-- Crucial for border and box-shadow, good for padding-top & padding-bottom -->
+                <div class="row"> <!-- Border and box-shadow is problemetic over flex-parent -->
                     <img src="./assets/images/fff.png&text=1" alt="">
                     <img src="./assets/images/fff.png&text=2" alt="">
                     <img src="./assets/images/fff.png&text=3" alt="">
                     <img src="./assets/images/fff.png&text=4" alt="">
                     <img src="./assets/images/fff.png&text=5" alt="">
-
+                    <!-- infinite trick - element duplication -->
                     <img src="./assets/images/fff.png&text=1" alt="">
                     <img src="./assets/images/fff.png&text=2" alt="">
                     <img src="./assets/images/fff.png&text=3" alt="">
@@ -44,5 +44,6 @@
     </section>
     <!-- ============= Loading animation END ==================== -->
 </body>
+
 
 </html>
